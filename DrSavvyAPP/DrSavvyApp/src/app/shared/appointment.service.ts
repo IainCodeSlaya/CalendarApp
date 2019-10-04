@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AppointmentService {
+  apiURL = 'https://localhost:44335/api';
 
   // formData: Appointment;
   appoinments: Appointment[];
@@ -15,6 +16,6 @@ export class AppointmentService {
 
   getAppointmentList() {
     // return this.http.get(environment.apiURL + '/MobileApps').toPromise();
-    return this.http.get(environment.apiURL + '/MobileApps');
+    return this.http.get(this.apiURL + '/MobileApps');
   }
 }

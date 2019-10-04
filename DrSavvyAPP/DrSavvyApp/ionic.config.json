@@ -1,5 +1,7 @@
 {
   "name": "DrSavvyApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
