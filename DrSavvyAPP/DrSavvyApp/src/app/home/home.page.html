@@ -1,0 +1,57 @@
+<div class="cal">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>
+        {{ viewTitle }}
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="today()">Today</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-row>
+      <!-- Change the displayed calendar mode -->
+      <ion-col size="4">
+        <ion-button expand="block" [color]="calendar.mode == 'month' ? 'primary' : 'dark'" (click)="changeMode('month')">Month</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="block" [color]="calendar.mode == 'week' ? 'primary' : 'dark'" (click)="changeMode('week')">Week</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="block" [color]="calendar.mode == 'day' ? 'primary' : 'dark'" (click)="changeMode('day')">Day</ion-button>
+      </ion-col>
+  
+      <!-- Move back one screen of the slides -->
+      <ion-col size="6" text-left>
+        <ion-button fill="clear" color="dark" (click)="back()">
+          <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+  
+      <!-- Move forward one screen of the slides -->
+      <ion-col size="6" text-right>
+        <ion-button fill="clear" color="dark" (click)="next()">
+          <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  <ion-content>
+    <div class="ion-padding cal">
+      <calendar 
+        [eventSource]="eventSource" 
+        [calendarMode]="calendar.mode" 
+        [currentDate]="calendar.currentDate"
+        (onEventSelected)="onEventSelected($event)"
+        (onTitleChanged)="onViewTitleChanged($event)"
+        (onTimeSelected)="onTimeSelected($event)"
+        startHour="6"
+        endHour="19"
+        step="60"
+        startingDayWeek="1"
+        timeInterval="60">
+      </calendar>
+    </div>
+  </ion-content>
+</div>

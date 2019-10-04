@@ -1,0 +1,42 @@
+:host ::ng-deep .weekview-normal-event-container {
+    position: relative;
+    }
+    
+    :host ::ng-deep .dayview-normal-event-container {
+    position: relative;
+    }
+
+    :root {
+        --ion-color-drsavvygrey: #505054;
+        --ion-color-drsavvygrey-rgb: 80,80,84;
+        --ion-color-drsavvygrey-contrast: #ffffff;
+        --ion-color-drsavvygrey-contrast-rgb: 255,255,255;
+        --ion-color-drsavvygrey-shade: #46464a;
+        --ion-color-drsavvygrey-tint: #626265;
+      }
+      
+      .ion-color-drsavvygrey {
+        --ion-color-base: var(--ion-color-drsavvygrey);
+        --ion-color-base-rgb: var(--ion-color-drsavvygrey-rgb);
+        --ion-color-contrast: var(--ion-color-drsavvygrey-contrast);
+        --ion-color-contrast-rgb: var(--ion-color-drsavvygrey-contrast-rgb);
+        --ion-color-shade: var(--ion-color-drsavvygrey-shade);
+        --ion-color-tint: var(--ion-color-drsavvygrey-tint);
+      }
+
+      .monthview-primary-with-event {
+          color: #505054;
+      }
+
+      .monthview-secondary-with-event {
+          color: #626265;
+      }
+
+      .cal {
+          background-color: #46464a;
+          //height: auto;
+          //position: relative;
+          height: 100%;
+      }
+      
+      
