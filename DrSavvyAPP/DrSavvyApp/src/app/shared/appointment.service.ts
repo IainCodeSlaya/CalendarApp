@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AppointmentService {
-  apiURL = 'https://localhost:44335/api';
+  apiURL = 'https://drsavvyapi370.azurewebsites.net//api';
 
   // formData: Appointment;
   appoinments: Appointment[];
